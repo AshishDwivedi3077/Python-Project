@@ -1,0 +1,35 @@
+{% extends "Index.html" %}
+{% block content %}
+
+<div class="container-fluid">
+<br>
+  <div class="row">
+    <div class="col-sm-4"  >
+          <!--<img style="border: black solid 1px;" src="{{ url_for('static',filename='Pdf_Images/WorkspaceInspection1/WorkspaceInspection1-1.jpg') }}" height="500" width="350" >-->
+         <div class="container " style="margin-left:10px">
+  <button type="button" onclick="UpdateForm(1)" hidden="hidden"><<</button>
+             <label id="pageNo" style="margin-left:80px"></label>
+  <button type="button" id="nextPage" hidden="hidden" style="margin-left:100px">>> </button>
+
+</div>
+        <!--<img id="formImg" style="border: black solid 1px;"  height="500" width="350" >-->
+<!--<iframe src="{{ url_for('static',filename='PfdFiles/WorkspaceInspection1.pdf') }}" height="500" width="350"></iframe>-->
+<iframe  id="formImg" height="500" width="350"></iframe>
+    </div>
+    <div class="col-sm-3" style="margin-top:10px;">
+        <div class="container " style="margin-left:400px">
+                        <button class="btn btn-sm btn-danger" onclick="GetFilesBlob()">Get From Blob</button>
+
+  <button type="button"  class="btn btn-sm btn-primary ">Toggle</button>
+  <button type="button" class="btn btn-sm btn-warning ">Undo</button>
+          <button type="button" id="savebtn" class="btn btn-sm btn-success">Save</button>
+
+
+</div>
+                <div name="jqGridPager"  class="jqGridPager" id="jqGridPager1"></div>
+
+  <table id="jqGrid"> </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

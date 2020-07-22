@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.4/css/ui.jqgrid.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.4/jquery.jqgrid.min.js"></script>
+
+<!--    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static',filename='styles/ui.jqgrid.css') }}" />-->
+
+      <script src="{{ url_for('static',filename='JsFiles/FormJs.js') }}"></script>
+
+<!--    <script src="{{  url_for('static',filename='azure-storage-blob.min.js') }}" charset="utf-8"></script>-->
+            <script src="{{  url_for('static',filename='azure-storage-blob.js') }}" charset="utf-8"></script>
+
+
+</head>
+<body>
+
+
+<br><br>
+
+<div class="container-fluid">
+<br>
+  <div class="row">
+    <div class="col-sm-8" >
+        <div class="form-group col-sm-9">
+      <input type="password" class="form-control" id="sasId" placeholder="Enter sas url with folder name" name="pwd">
+
+      <br>
+      <button class="btn btn-warning " id="prevbtn">Prev</button>
+                  <label class="btn  pull-right" id="FormNoLbl">0 of 1000</label>
+
+
+    </div>
+    </div>
+      <div class="col-sm-4"  style="align:right">
+        <div class="form-group col-sm-8">
+      <input type="password" class="form-control" id="search" placeholder="Search Form" name="pwd">
+      <br>
+            <button class="btn btn-warning  pull-right" id="nextBtn">Next</button>
+
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% block content %}
+    {% endblock %}
+
+
+</body>
+</html>
