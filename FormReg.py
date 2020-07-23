@@ -46,7 +46,7 @@ def LoadForm():
     resp = request.form
     formno=resp['form']
     #img_path="static/Pdf_Images/WorkspaceInspection"+ str(formno) +"/WorkspaceInspection"+ str(formno) +"-"+ str(resp['page']) +".jpg";
-    img_path="static\PdfFiles\WorkspaceInspection"+ str(formno) +".pdf";
+    img_path=r"static\PdfFiles\WorkspaceInspection"+ str(formno) +".pdf";
     return img_path
 
 def get_key(fields,val):
