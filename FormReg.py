@@ -6,11 +6,17 @@ import os, uuid
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+ return "Heloooooooooooooo"
+    
+  #return render_template("UpdateForm.html")
+
 #with open("templates/JsonData/DataReg.json") as f:
  #   result = json.load(f)
 
 #fields = result['analyzeResult']['documentResults'][0]['fields']
-
+'''
 def listtodict(A, di):
    di = dict(A)
    return di
@@ -171,6 +177,6 @@ def Downloadblob():
             my_blob.write(download_stream.readall())
             print("downloaded  " + f)
     return "asdasdasdsad"
-
+'''
 if __name__ == '__main__':
     app.run(debug=True)
